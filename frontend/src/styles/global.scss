@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #0088FE;
+  --color-success: #00C49F;
+  --color-warning: #FFBB28;
+  --color-danger: #FF8042;
+  --color-info: #8884d8;
+  
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --color-border: #ddd;
+  --color-table-header-bg: #f4f4f4;
+  
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 20px;
+  --spacing-lg: 32px;
+  
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
