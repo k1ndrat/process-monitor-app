@@ -1,11 +1,43 @@
 .container {
-  padding: var(--spacing-md);
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
 .title {
-  margin-bottom: var(--spacing-md);
   color: var(--color-text);
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.count {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.alertBox {
+  background-color: rgba(255, 0, 51, 0.1);
+  color: #d93025;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 0, 51, 0.3);
+  font-weight: 500;
+  text-align: left;
 }
 
 .error {

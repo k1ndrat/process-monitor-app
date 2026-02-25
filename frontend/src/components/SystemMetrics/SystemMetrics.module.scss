@@ -1,0 +1,80 @@
+.container {
+  padding: 1.5rem;
+  background: #1e1e1e;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+.chartsGrid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.chartCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 250px;
+}
+
+.chartHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #aaa;
+  }
+}
+
+.percentage {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtext {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+/* Стовпчаста діаграма */
+.barContainer {
+  width: 80px;
+  height: 200px; /* Висота стовпця */
+  background: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Щоб заповнення йшло знизу вверх */
+  border: 1px solid #444;
+}
+
+.barFill {
+  width: 100%;
+  transition: height 0.3s ease-in-out, background-color 0.3s ease;
+  border-radius: 0 0 4px 4px;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff4444;
+}

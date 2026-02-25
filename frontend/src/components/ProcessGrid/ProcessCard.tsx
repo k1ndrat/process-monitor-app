@@ -1,5 +1,5 @@
 import React from 'react';
-import type { TTask } from '../../../types';
+import type { TTask } from '../../../../types';
 import styles from './ProcessCard.module.scss';
 
 interface ProcessCardProps {
@@ -35,17 +35,17 @@ const ProcessCard: React.FC<ProcessCardProps> = ({ task, color }) => {
       
       <div className={styles.body}>
         <div className={styles.metric}>
-          <span className={styles.label}>Memory:</span>
+          <span className={styles.label}>Пам'ять:</span>
           <span className={styles.value}>{task.usage}</span>
         </div>
         
 				<div className={styles.statsGrid}>
           <div className={styles.statItem}>
-            <span className={styles.statLabel}>Avg (Mean):</span>
+            <span className={styles.statLabel}>Середнє:</span>
             <span className={styles.statValue}>{formatProcessMemory(task.mean)}</span>
           </div>
           <div className={styles.statItem}>
-            <span className={styles.statLabel}>Std Dev:</span>
+            <span className={styles.statLabel}>Відхилення:</span>
             <span className={styles.statValue}>±{formatProcessMemory(task.stdDev)}</span>
           </div>
         </div>

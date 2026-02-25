@@ -1,7 +1,10 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import styles from './App.module.scss';
-import ProcessGrid from './components/ProcessGrid';
-import ProcessMonitor from './components/ProcessMonitorChartJS';
+import AutorunsGrid from './components/Autoruns/AutorunsGrid';
+import ProcessMonitor from './components/ProcessChart/ProcessMonitorChartJS';
+import ProcessGrid from './components/ProcessGrid/ProcessGrid';
+import SystemMetrics from './components/SystemMetrics/SystemMetrics';
+import WhoisViewer from './components/WhoIs/WhoIs';
 
 function App() {
   return (
@@ -11,19 +14,40 @@ function App() {
           to="/" 
           className={({ isActive }: { isActive: boolean }) => `${styles.link} ${isActive ? styles.active : ''}`}
         >
-          Chart View
+          Графік процесів
         </NavLink>
         <NavLink 
           to="/grid" 
           className={({ isActive }: { isActive: boolean }) => `${styles.link} ${isActive ? styles.active : ''}`}
         >
-          Grid View
+          Список процесів
+        </NavLink>
+        <NavLink 
+          to="/autoruns" 
+          className={({ isActive }: { isActive: boolean }) => `${styles.link} ${isActive ? styles.active : ''}`}
+        >
+          Автозавантаження
+        </NavLink>
+        <NavLink 
+          to="/whois" 
+          className={({ isActive }: { isActive: boolean }) => `${styles.link} ${isActive ? styles.active : ''}`}
+        >
+          Хто є хто?
+        </NavLink>
+        <NavLink 
+          to="/metrics" 
+          className={({ isActive }: { isActive: boolean }) => `${styles.link} ${isActive ? styles.active : ''}`}
+        >
+          Метрики
         </NavLink>
       </nav>
 
       <Routes>
         <Route path="/" element={<ProcessMonitor />} />
         <Route path="/grid" element={<ProcessGrid />} />
+        <Route path="/autoruns" element={<AutorunsGrid />} />
+        <Route path="/whois" element={<WhoisViewer />} />
+        <Route path="/metrics" element={<SystemMetrics />} />
       </Routes>
     </>
   );

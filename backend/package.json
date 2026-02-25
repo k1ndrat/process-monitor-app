@@ -14,7 +14,10 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@types/node-cache": "^4.2.5",
     "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "node-cache": "^5.1.2",
+    "socket.io": "^4.8.3"
   }
 }
