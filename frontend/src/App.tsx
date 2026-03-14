@@ -4,6 +4,7 @@ import AutorunsGrid from './components/Autoruns/AutorunsGrid';
 import ProcessMonitor from './components/ProcessChart/ProcessMonitorChartJS';
 import ProcessGrid from './components/ProcessGrid/ProcessGrid';
 import SystemMetrics from './components/SystemMetrics/SystemMetrics';
+import TrafficMonitor from './components/TrafficMonitor/TrafficMonitor';
 import WhoisViewer from './components/WhoIs/WhoIs';
 
 function App() {
@@ -40,6 +41,12 @@ function App() {
         >
           Метрики
         </NavLink>
+        <NavLink 
+          to="/traffic" 
+          className={({ isActive }: { isActive: boolean }) => `${styles.link} ${isActive ? styles.active : ''}`}
+        >
+          Трафік
+        </NavLink>
       </nav>
 
       <Routes>
@@ -48,6 +55,7 @@ function App() {
         <Route path="/autoruns" element={<AutorunsGrid />} />
         <Route path="/whois" element={<WhoisViewer />} />
         <Route path="/metrics" element={<SystemMetrics />} />
+        <Route path="/traffic" element={<TrafficMonitor />} />
       </Routes>
     </>
   );

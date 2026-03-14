@@ -58,3 +58,20 @@ export type TSystemMetrics = {
   ramUsedGb: string;    // Використана пам'ять у ГБ
   ramTotalGb: string;   // Загальна пам'ять у ГБ
 };
+
+export type TTrafficItem = {
+  process: string;
+  pid: number | null;
+  sent_kb: number;
+  recv_kb: number;
+  total_kb: number;
+};
+
+export type TTrafficData = {
+  metadata: {
+    startTime: string;
+    endTime: string;
+    durationSeconds: number;
+  };
+  data: TTrafficItem[];
+};

@@ -5,6 +5,7 @@ import { Server } from "socket.io";
 import autorunsRoutes from "./routes/autoruns.routes.ts";
 import networkConnectionsRoutes from "./routes/net-tcp-connection.routes.ts";
 import whoisRoutes from "./routes/whois.routes.ts";
+import trafficRoutes from "./routes/traffic.routes.ts";
 import { setupSockets } from "./sockets/index.ts";
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(cors());
 app.use("/api/autoruns", autorunsRoutes);
 app.use("/api/network-connections", networkConnectionsRoutes);
 app.use("/api/whois", whoisRoutes);
+app.use("/api/traffic", trafficRoutes);
 
 setupSockets(io);
 
