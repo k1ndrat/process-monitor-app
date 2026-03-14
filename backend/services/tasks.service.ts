@@ -15,8 +15,8 @@ export const getTasksData = (): Promise<TTask[]> => {
           const parts = line.split('","').map((p) => p.replace(/"/g, ""));
           if (parts.length >= 5) {
             const name = parts[0];
-            const pid = parts[1];
-            const rawMem = parts[4].replace(/\D/g, "");
+            const pid = parts[1] ?? "";
+            const rawMem = (parts[4] ?? "").replace(/\D/g, "");
             const memUsage = parseInt(rawMem, 10) || 0;
             const anomalyData = detectAnomaly(pid, memUsage);
 
