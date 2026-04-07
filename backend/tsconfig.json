@@ -8,12 +8,12 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
-    "allowImportingTsExtensions": true, // Дозволяє .ts в імпортах
-    "noEmit": true, // ВИМАГАЄТЬСЯ для попереднього пункту
+    "allowImportingTsExtensions": true, // Allows using .ts extensions in import paths
+    "noEmit": true, // REQUIRED when allowImportingTsExtensions is enabled
     "target": "esnext",
     "types": ["node"],
     "lib": ["esnext"],
-    "esModuleInterop": true, // Важливо для child_process
+    "esModuleInterop": true, // Necessary for compatibility with CommonJS modules (e.g., child_process)
 
     // Other Outputs
     "sourceMap": true,

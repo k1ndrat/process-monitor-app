@@ -5,7 +5,8 @@ param (
 
 # 1. Налаштування
 $wiresharkPath = "D:\SOFT\DEV\Wireshark"
-$localIp = "192.168.31.83"
+$localIp = "192.168.31.87"
+# $localIp = "172.20.10.2"
 
 if (-not (Test-Path "$wiresharkPath\tshark.exe")) {
     return

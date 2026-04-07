@@ -3,12 +3,13 @@
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   border-top: 4px solid transparent; /* Color set inline */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
 
   &:hover {
     transform: translateY(-2px);
@@ -18,7 +19,17 @@
 
 .anomaly {
   background: rgba(255, 0, 51, 0.1);
-  border-top-color: #FF0033 !important; /* Force override if needed */
+  border-top-color: #ff0033 !important; /* Force override if needed */
+
+  .name,
+  .value {
+    color: #ff0033;
+  }
+
+  .label,
+  .statValue {
+    color: #000000;
+  }
 }
 
 .header {
@@ -98,14 +109,20 @@
 }
 
 .warning {
-  color: #FF0033;
+  color: #ff0033;
   font-weight: bold;
   font-size: 0.9rem;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.6; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }

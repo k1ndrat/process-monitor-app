@@ -26,6 +26,12 @@ importers:
       recharts:
         specifier: ^3.7.0
         version: 3.7.0(@types/react@19.2.13)(react-dom@19.2.4(react@19.2.4))(react-is@19.2.4)(react@19.2.4)(redux@5.0.1)
+      scichart:
+        specifier: ^5.0.211
+        version: 5.0.211
+      scichart-react:
+        specifier: ^1.0.0
+        version: 1.0.0(react@19.2.4)(scichart@5.0.211)
       socket.io-client:
         specifier: ^4.8.3
         version: 4.8.3
@@ -1291,6 +1297,15 @@ packages:
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+
+  scichart-react@1.0.0:
+    resolution: {integrity: sha512-fadf70hDbK1W9lSgNV28ovc+3W75MBOwshZ2+Wdr0oTtpGnzIkEDfVCkutaHa4UylzzpcB2jrYeyawKk3iqq7w==}
+    peerDependencies:
+      react: '>=16.8.0'
+      scichart: '>=4.0.828'
+
+  scichart@5.0.211:
+    resolution: {integrity: sha512-bNFEsk1veXLJ51jSZiid5GD1O1PDU/O3X2GoSrj91b1/twZxDjVPD8Y8E6444aPo51klOVmX9LfRn1D56PHArg==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -2594,6 +2609,13 @@ snapshots:
       '@parcel/watcher': 2.5.6
 
   scheduler@0.27.0: {}
+
+  scichart-react@1.0.0(react@19.2.4)(scichart@5.0.211):
+    dependencies:
+      react: 19.2.4
+      scichart: 5.0.211
+
+  scichart@5.0.211: {}
 
   semver@6.3.1: {}
 
